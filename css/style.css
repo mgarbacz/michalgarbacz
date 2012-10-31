@@ -99,8 +99,8 @@ a.link-block:hover {
   background:-moz-linear-gradient(left, #f6f, #ff6); /* FF */
   background:-o-linear-gradient(left, #f6f, #ff6); /* Opera */
   background:-ms-linear-gradient(left, #f6f, #ff6); /* IE10 */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f',
-    endColorstr='#ff6', GradientType=1); /* IE6-9 */
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff66ff',
+    endColorstr='#ffff66', GradientType=1); /* IE6-9 */
 }
 
 #a-so {
