@@ -113,7 +113,7 @@ a.link-block:hover {
   background:-moz-linear-gradient(left , #ff6, #f6f); /* FF */
   background:-o-linear-gradient(left, #ff6, #f6f); /* Opera */
   background:-ms-linear-gradient(left, #ff6, #f6f); /* IE10 */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6',
-    endColorstr='#f6f', GradientType=1); /* IE6-9 */
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff66',
+    endColorstr='#ff66ff', GradientType=1); /* IE6-9 */
 }
 /* end regular */
