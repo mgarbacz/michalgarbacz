@@ -70,11 +70,13 @@ div.link-block-container {
 }
 
 a.link-block {
-  border:5px solid #66ffff;
-  border-radius:20px;
-  color:#66ffff;
+  background:#6ff;
+  border:1px solid #6ff;
+  border-radius:10px;
+  color:#555;
   cursor:pointer;
   float:left;
+  font-weight:bold;
   font-family:"Helvetica Nue", Helvetica, Arial, sans-serif;
   font-size:60px;
   height:100px;
@@ -84,13 +86,28 @@ a.link-block {
   width:400px;
 }
 
-a.link-block.last {
+#a-gh {
+  float:left;
+}
+
+#a-so {
   float:right;
 }
 
 a.link-block:hover {
-  border-color:#ff66ff;
-  box-shadow:0 0 16px 4px #ffff66;
-  color:#ff66ff;
+  background:#f6f;
+  border-color:#f6f;
+  color:#ff6;
+  /*box-shadow:0 0 12px 4px #ffff66;*/
 }
+/*
+a.link-block:hover:before, a.link-block:hover:after {
+  content:attr(title);
+  color:#ffff66;
+  opacity:0.1;
+  position:relative;
+}
+
+a.link-block:hover:before { top: 1px; left: 71px }
+a.link-block:hover:after  { top: 2px; left: -70px }
 /* end regular */
