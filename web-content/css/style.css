@@ -51,6 +51,7 @@ html, body {
 
 body {
   background:#555;
+  font-family:"Helvetica Nue", Helvetica, Arial, sans-serif;
 }
 
 #div-background {
@@ -87,7 +88,6 @@ a.link-block {
   cursor:pointer;
   float:left;
   font-weight:bold;
-  font-family:"Helvetica Nue", Helvetica, Arial, sans-serif;
   font-size:60px;
   height:100px;
   line-height:100px;
