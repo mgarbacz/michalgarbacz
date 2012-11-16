@@ -53,27 +53,31 @@ body {
   background:#555;
 }
 
+#div-background {
+  position:absolute;
+  z-index:0;
+}
+
+#div-foreground {
+  height:100%;
+  position:relative;
+  z-index:1;
+}
+
 /* Hacky method to vertically center link-block-container - this div is empty */
 /* We have it float to the left, set the height to take up half the page, and */
 /* bump the div below it upward by half of that div's size so that it centers */
-div.floater {
+#hacky-floating {
   float:left;
   height:50%;
   margin-bottom:-52px; /* link-block-container height is 110, so this is half */
-}
-
-canvas#space-background {
-  position:absolute;
-  z-index:0;
 }
 
 div.link-block-container {
   clear:both; /* Part of hacky method with floater */
   height:104px;
   margin:0 auto;
-  position:relative;
   width:850px;
-  z-index:1;
 }
 
 a.link-block {
@@ -96,11 +100,11 @@ a.link-block:hover {
   background:#f6f; /* Old browsers */
 }
 
-#a-gh {
+#a-github {
   float:left;
 }
 
-#a-gh:hover {
+#a-github:hover {
   background:-webkit-gradient(linear, left top, right top, from(#f6f),
     to(#ff6)); /* Webkit */
   background:-moz-linear-gradient(left, #f6f, #ff6); /* FF */
@@ -110,11 +114,11 @@ a.link-block:hover {
     endColorstr='#ffff66', GradientType=1); /* IE6-9 */
 }
 
-#a-so {
+#a-stackoverflow {
   float:right;
 }
 
-#a-so:hover {
+#a-stackoverflow:hover {
   background:-webkit-gradient(linear, left top, right top, from(#ff6),
     to(#f6f)); /* Webkit */
   background:-moz-linear-gradient(left , #ff6, #f6f); /* FF */
@@ -122,5 +126,13 @@ a.link-block:hover {
   background:-ms-linear-gradient(left, #ff6, #f6f); /* IE10 */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff66',
     endColorstr='#ff66ff', GradientType=1); /* IE6-9 */
+}
+
+#a-source {
+  bottom:0px;
+  color:#fafafa;
+  left:0px;
+  position:absolute;
+  text-decoration:none;
 }
 /* end regular */
