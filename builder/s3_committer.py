@@ -3,7 +3,10 @@ from builder import results_printer
 
 # Boto provides s3 date in string format, we need seconds since the epoch
 def format_s3_date(s3_date):
+  # S3 string format is 'Sun, 01 Jan 2012 00:00:00 GMT'
   s3_time_format = '%a, %d %b %Y %H:%M:%S %Z'
+  # Using the s3 given date and its format, strptime gives us a struct_time
+  # which is made into time (seconds since the epoch) using mktime
   return time.mktime(time.strptime(s3_date, s3_time_format))
 
 # We want to commit all modified files to the s3 bucket for the site
