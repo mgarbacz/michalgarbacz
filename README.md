@@ -9,5 +9,5 @@ Domain Registry and DNS provided by [Nearly Free Speech] (http://www.nearlyfrees
 todos
 =====
 * Phase away from paperjs (so many lines of code!) for bubbly bg
-* Fine-tune python builder script to only update modified files
+* Have python builder script adapt to new files (currently crashes)
 * Organize python builder script
