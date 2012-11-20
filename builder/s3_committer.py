@@ -26,8 +26,6 @@ def commit_to_s3():
         # For s3, we don't want the 'web-content' part of file path
         s3_file_path = local_file_path[12:]
 
-        # Printing the filename to track progress
-        print filename,
         # We need the times for local and s3 last modified
         local_last_modified = os.path.getmtime(local_file_path)
         s3_last_modified = format_s3_date(bucket
@@ -35,13 +33,14 @@ def commit_to_s3():
 
         # Is the local modified date newer than s3 modified date?
         if (local_last_modified > s3_last_modified):
-          print 'is updating...'
+          print filename + ' is updating...'
           key_file = boto.s3.key.Key(bucket)
           key_file.key = s3_file_path
           key_file.set_contents_from_filename(local_file_path)
           key_file.make_public()
-        else:
-          print 'is up to date.'
+        
+        # Will print after update or if no update was required
+        print filename + ' is up to date.'
 
     # If we got here with no exceptions, changes have been committed
     success = True
