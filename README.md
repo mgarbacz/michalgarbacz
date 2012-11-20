@@ -16,4 +16,4 @@ long-term
 
 short-term
 * Have python builder script adapt to new files (currently crashes)
-* Organize python builder script
+* Have python builder script build javascript and stylesheets
