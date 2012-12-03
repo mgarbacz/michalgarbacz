@@ -14,6 +14,7 @@ long-term
 * Infographic style for intro page
 * Project demos/descriptions
 * Blog? of sorts
+* Add flock of starships to star background (bird style AI)
 
 short-term
 * Have python builder script adapt to new files (currently crashes)
