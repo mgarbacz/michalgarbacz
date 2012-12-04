@@ -1,10 +1,6 @@
 // The amount of symbol we want to place;
 var count = 100;
 
-var star_size = 5;
-var star_mvmt = 30;
-var mobile_modifier = 0.5;
-
 // Create a symbol, which we will use to place instances of later:
 var path = new Path.Circle(new Point(0, 0), 5);
 // Starting with yellow color, so that first hue cycle will make cyan
