@@ -1,3 +1,5 @@
+"use strict";
+
 $('#a-github').hover(
   function() {
     $(this).html('github');
