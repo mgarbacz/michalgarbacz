@@ -13,7 +13,8 @@ $('#a-stackoverflow').hover(
     $(this).html('so');
 });
 
-$(function() {
+window.onload = init;
+function init() {
   var img1 = new Image();
   img1.src = 'img/v1.png';
   var img2 = new Image();
@@ -22,12 +23,10 @@ $(function() {
   var ctx = canvas_ruby[0].getContext("2d");
   var i = 66*(Math.PI*2)/100;
   var j = 0;
-  img1.onload = function() {
     ctx.fillStyle = "rgba(0,0,0,0.0)";
     ctx.clearRect(0,0,img1.width,img1.height);
     ctx.save();
     ctx.drawImage(img1, 0, 0);
-    img2.onload = function() {
       ctx.beginPath();
       ctx.lineWidth = 5;
       ctx.arc(img1.width/2,img1.height/2,img1.height/2,i-Math.PI/2,j-Math.PI/2,true);
@@ -36,9 +35,7 @@ $(function() {
       ctx.fill();
       ctx.clip();
       ctx.drawImage(img2,0,0);
-    };
     ctx.restore();
-  }
 
   $('#skill-ruby').append(canvas_ruby);
-});
+}
