@@ -13,19 +13,32 @@ $('#a-stackoverflow').hover(
     $(this).html('so');
 });
 
-var myplugin;
-if(!myplugin){
-  myplugin = $('#skill-python').cprogress({
-    percent: 10, // starting position
-    img1: 'img/v1.png', // background
-    img2: 'img/v2.png', // foreground
-    speed: 200, // speed (timeout)
-    PIStep : 0.05, // every step foreground area is bigger about this val
-    limit: 20, // end value
-    loop : false, //if true, no matter if limit is set, progressbar will be running
-    showPercent : true, //show hide percent
-    onInit: function(){console.log('onInit');},
-    onProgress: function(p){console.log('onProgress',p);}, //p=current percent
-    onComplete: function(p){console.log('onComplete',p);}
-  });
-}
+$(function() {
+  var img1 = new Image();
+  img1.src = 'img/v1.png';
+  var img2 = new Image();
+  img2.src = 'img/v2.png';
+  var canvas_ruby = $('<canvas />');
+  var ctx = canvas_ruby[0].getContext("2d");
+  var i = 66*(Math.PI*2)/100;
+  var j = 0;
+  img1.onload = function() {
+    ctx.fillStyle = "rgba(0,0,0,0.0)";
+    ctx.clearRect(0,0,img1.width,img1.height);
+    ctx.save();
+    ctx.drawImage(img1, 0, 0);
+    img2.onload = function() {
+      ctx.beginPath();
+      ctx.lineWidth = 5;
+      ctx.arc(img1.width/2,img1.height/2,img1.height/2,i-Math.PI/2,j-Math.PI/2,true);
+      ctx.lineTo(img1.width/2,img1.height/2);
+      ctx.closePath();
+      ctx.fill();
+      ctx.clip();
+      ctx.drawImage(img2,0,0);
+    };
+    ctx.restore();
+  }
+
+  $('#skill-ruby').append(canvas_ruby);
+});
