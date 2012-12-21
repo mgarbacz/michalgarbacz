@@ -135,4 +135,14 @@ a.link-block:hover {
   position:absolute;
   text-decoration:none;
 }
+
+#div-skills {
+  height:150px;
+  width:850px;
+  margin:0 auto;
+}
+
+div.skill {
+  float:left;
+}
 /* end regular */
