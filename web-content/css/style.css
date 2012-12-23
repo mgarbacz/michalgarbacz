@@ -148,11 +148,9 @@ div.skill-canvas-container {
 }
 
 span.skill-icon {
-  color:#555;
+  color:#ff6;
   font-size:32px;
-  background-color:#6ff;
   padding:4px;
-  border-radius:10px;
   position:absolute;
   top:28px;
   left:28px;
