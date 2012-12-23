@@ -1,12 +1,12 @@
 "use strict";
 
-$('#a-github').hover(
+$('#link-github').hover(
   function() {
     $(this).html('github');
   }, function() {
     $(this).html('gh');
 });
-$('#a-stackoverflow').hover(
+$('#link-stackoverflow').hover(
   function() { 
     $(this).html('stackoverflow'); 
   }, function() { 
@@ -19,7 +19,10 @@ var img2 = new Image();
 img2.src = 'img/v2.png';
 
 function drawSkillCanvas(skillLevel) {
-  var skillCanvas= $('<canvas />');
+  var skillCanvas= $('<canvas class="skill-canvas" />');
+  skillCanvas.attr('width', img1.width);
+  skillCanvas.attr('height', img1.height);
+
   var context = skillCanvas[0].getContext('2d');
   var i = skillLevel*(Math.PI*2)/100;
   var j = 0;
@@ -42,8 +45,8 @@ function drawSkillCanvas(skillLevel) {
 
 window.onload = init;
 function init() {
-  $('#skill-ruby').append(drawSkillCanvas(70));
-  $('#skill-python').append(drawSkillCanvas(65));
-  $('#skill-javascript').append(drawSkillCanvas(95));
-  $('#skill-erlang').append(drawSkillCanvas(40));
+  $('#skill-ruby').prepend(drawSkillCanvas(70));
+  $('#skill-python').prepend(drawSkillCanvas(65));
+  $('#skill-javascript').prepend(drawSkillCanvas(95));
+  $('#skill-erlang').prepend(drawSkillCanvas(40));
 }

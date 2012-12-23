@@ -60,6 +60,8 @@ body {
 }
 
 #div-foreground {
+  width:940px;
+  margin:0 auto;
   height:100%;
   position:relative;
   z-index:1;
@@ -71,14 +73,12 @@ body {
 #hacky-floating {
   float:left;
   height:50%;
-  margin-bottom:-52px; /* link-block-container height is 110, so this is half */
+  margin-bottom:-110px; /* link-block-container height is 110, so this is half */
 }
 
 div.link-block-container {
   clear:both; /* Part of hacky method with floater */
   height:104px;
-  margin:0 auto;
-  width:850px;
 }
 
 a.link-block {
@@ -93,18 +93,18 @@ a.link-block {
   line-height:100px;
   text-align:center;
   text-decoration:none;
-  width:410px;
+  width:455px;
 }
 
 a.link-block:hover {
   background:#f6f; /* Old browsers */
 }
 
-#a-github {
+#link-github {
   float:left;
 }
 
-#a-github:hover {
+#link-github:hover {
   background:-webkit-gradient(linear, left top, right top, from(#f6f),
     to(#ff6)); /* Webkit */
   background:-moz-linear-gradient(left, #f6f, #ff6); /* FF */
@@ -114,11 +114,11 @@ a.link-block:hover {
     endColorstr='#ffff66', GradientType=1); /* IE6-9 */
 }
 
-#a-stackoverflow {
+#link-stackoverflow {
   float:right;
 }
 
-#a-stackoverflow:hover {
+#link-stackoverflow:hover {
   background:-webkit-gradient(linear, left top, right top, from(#ff6),
     to(#f6f)); /* Webkit */
   background:-moz-linear-gradient(left , #ff6, #f6f); /* FF */
@@ -128,7 +128,7 @@ a.link-block:hover {
     endColorstr='#ff66ff', GradientType=1); /* IE6-9 */
 }
 
-#a-source {
+#link-source {
   bottom:0px;
   color:#fafafa;
   left:0px;
@@ -136,13 +136,27 @@ a.link-block:hover {
   text-decoration:none;
 }
 
-#div-skills {
-  height:150px;
-  width:850px;
-  margin:0 auto;
+#skills-container {
 }
 
-div.skill {
+div.skill-canvas-container {
+  height:105px;
+  width:105px;
   float:left;
+  position:relative;
+}
+
+span.skill-icon {
+  color:#555;
+  font-size:33px;
+  background-color:#6ff;
+  padding:4px;
+  border-radius:10px;
+  position:absolute;
+  top:32px;
+  left:32px;
+}
+
+canvas.skill-canvas {
 }
 /* end regular */
