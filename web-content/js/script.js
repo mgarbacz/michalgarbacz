@@ -20,10 +20,10 @@ img2.src = 'img/v2.png';
 
 function drawSkillCanvas(skillLevel) {
   var skillCanvas= $('<canvas />');
-  var context = skillCanvas[0].getContext("2d");
+  var context = skillCanvas[0].getContext('2d');
   var i = skillLevel*(Math.PI*2)/100;
   var j = 0;
-  context.fillStyle = "rgba(0,0,0,0.0)";
+  context.fillStyle = 'rgba(0,0,0,0.0)';
   context.clearRect(0,0,img1.width,img1.height);
   context.save();
   context.drawImage(img1, 0, 0);
