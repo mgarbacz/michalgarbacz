@@ -73,7 +73,7 @@ body {
 #hacky-floating {
   float:left;
   height:50%;
-  margin-bottom:-110px; /* link-block-container height is 110, so this is half */
+  margin-bottom:-150px; /* link-block-container height is 110, so this is half */
 }
 
 div.link-block-container {
@@ -140,21 +140,22 @@ a.link-block:hover {
 }
 
 div.skill-canvas-container {
-  height:105px;
-  width:105px;
+  height:96px;
+  width:96px;
+  margin:4px;
   float:left;
   position:relative;
 }
 
 span.skill-icon {
   color:#555;
-  font-size:33px;
+  font-size:32px;
   background-color:#6ff;
   padding:4px;
   border-radius:10px;
   position:absolute;
-  top:32px;
-  left:32px;
+  top:28px;
+  left:28px;
 }
 
 canvas.skill-canvas {

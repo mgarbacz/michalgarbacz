@@ -13,31 +13,38 @@ $('#link-stackoverflow').hover(
     $(this).html('so');
 });
 
-var img1 = new Image();
-img1.src = 'img/v1.png';
-var img2 = new Image();
-img2.src = 'img/v2.png';
+// Initializing image objects of source images for use in skill level canvases
+var skillBack = new Image();
+skillBack.src = 'img/skillBack.png';
+var skillFill = new Image();
+skillFill.src = 'img/skillFill.png';
 
+// Draws the given skill level onto a canvas element
+// skillLevel should be an integer - 1 to 100
 function drawSkillCanvas(skillLevel) {
+  // Initialize our canvas, giving it a size equal to the source images
   var skillCanvas= $('<canvas class="skill-canvas" />');
-  skillCanvas.attr('width', img1.width);
-  skillCanvas.attr('height', img1.height);
+  skillCanvas.attr('width', skillBack.width);
+  skillCanvas.attr('height', skillBack.height);
 
+  // Using the skillLevel to set arc length
+  var arcLength = -(skillLevel/100)*(Math.PI*2);
+
+  // Taking care of details
   var context = skillCanvas[0].getContext('2d');
-  var i = skillLevel*(Math.PI*2)/100;
-  var j = 0;
   context.fillStyle = 'rgba(0,0,0,0.0)';
-  context.clearRect(0,0,img1.width,img1.height);
+  context.clearRect(0,0,skillBack.width,skillBack.height);
   context.save();
-  context.drawImage(img1, 0, 0);
+  context.drawImage(skillBack, 0, 0);
   context.beginPath();
   context.lineWidth = 5;
-  context.arc(img1.width/2,img1.height/2,img1.height/2,i-Math.PI/2,j-Math.PI/2,true);
-  context.lineTo(img1.width/2,img1.height/2);
+  context.arc(skillBack.width/2,skillBack.height/2,skillBack.height/2,
+    0-Math.PI/2,arcLength-Math.PI/2,true);
+  context.lineTo(skillBack.width/2,skillBack.height/2);
   context.closePath();
   context.fill();
   context.clip();
-  context.drawImage(img2,0,0);
+  context.drawImage(skillFill,0,0);
   context.restore();
 
   return skillCanvas;
@@ -45,8 +52,22 @@ function drawSkillCanvas(skillLevel) {
 
 window.onload = init;
 function init() {
+  $('#skill-python').prepend(drawSkillCanvas(50));
   $('#skill-ruby').prepend(drawSkillCanvas(70));
-  $('#skill-python').prepend(drawSkillCanvas(65));
-  $('#skill-javascript').prepend(drawSkillCanvas(95));
+  $('#skill-rails').prepend(drawSkillCanvas(70));
+  $('#skill-javascript').prepend(drawSkillCanvas(90));
+  $('#skill-jquery').prepend(drawSkillCanvas(90));
+  $('#skill-backbonejs').prepend(drawSkillCanvas(50));
+  $('#skill-nodejs').prepend(drawSkillCanvas(40));
+  $('#skill-coffeescript').prepend(drawSkillCanvas(20));
+  $('#skill-java').prepend(drawSkillCanvas(70));
+  $('#skill-android').prepend(drawSkillCanvas(50));
+  $('#skill-csharp').prepend(drawSkillCanvas(30));
+  $('#skill-cplusplus').prepend(drawSkillCanvas(30));
   $('#skill-erlang').prepend(drawSkillCanvas(40));
+  $('#skill-scala').prepend(drawSkillCanvas(40));
+  $('#skill-mysql').prepend(drawSkillCanvas(60));
+  $('#skill-postgresql').prepend(drawSkillCanvas(40));
+  $('#skill-sqlite').prepend(drawSkillCanvas(70));
+  $('#skill-mongodb').prepend(drawSkillCanvas(70));
 }
