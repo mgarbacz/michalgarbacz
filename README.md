@@ -11,6 +11,7 @@ todos
 long-term
 * Phase away from paperjs (so many lines of code!) for star field bg
 * Improve performance for mobile devices on star field fps
+* Enable mouse-down for touch screens to move star field
 * Infographic style for intro page
 * Project demos/descriptions
 * Blog? of sorts
@@ -19,4 +20,5 @@ long-term
 short-term
 * Have python builder script adapt to new files (currently crashes)
 * Have python builder script build javascript and stylesheets
-* Enable mouse-down for touch screens to move star field
+* Refactor the skill canvas drawing for more automation - backbonejs?
+* Get rid of the gh/so
