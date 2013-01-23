@@ -1,18 +1,5 @@
 "use strict";
 
-$('#link-github').hover(
-  function() {
-    $(this).html('github');
-  }, function() {
-    $(this).html('gh');
-});
-$('#link-stackoverflow').hover(
-  function() { 
-    $(this).html('stackoverflow'); 
-  }, function() { 
-    $(this).html('so');
-});
-
 // Initializing image objects of source images for use in skill level canvases
 var skillBack = new Image();
 skillBack.src = 'img/skillBack.png';

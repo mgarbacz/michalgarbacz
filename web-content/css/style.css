@@ -73,70 +73,45 @@ body {
 #hacky-floating {
   float:left;
   height:50%;
-  margin-bottom:-150px; /* link-block-container height is 110, so this is half */
+  margin-bottom:-160px; /* total height is 320px, so this is half */
 }
 
-div.link-block-container {
+#intro-container {
   clear:both; /* Part of hacky method with floater */
-  height:104px;
-}
-
-a.link-block {
-  background:#6ff;
-  border-radius:10px;
-  color:#555;
-  cursor:pointer;
-  float:left;
-  font-weight:bold;
-  font-size:60px;
-  height:100px;
-  line-height:100px;
-  text-align:center;
-  text-decoration:none;
-  width:455px;
-}
-
-a.link-block:hover {
-  background:#f6f; /* Old browsers */
-}
-
-#link-github {
-  float:left;
-}
-
-#link-github:hover {
-  background:-webkit-gradient(linear, left top, right top, from(#f6f),
-    to(#ff6)); /* Webkit */
-  background:-moz-linear-gradient(left, #f6f, #ff6); /* FF */
-  background:-o-linear-gradient(left, #f6f, #ff6); /* Opera */
-  background:-ms-linear-gradient(left, #f6f, #ff6); /* IE10 */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff66ff',
-    endColorstr='#ffff66', GradientType=1); /* IE6-9 */
-}
-
-#link-stackoverflow {
-  float:right;
-}
-
-#link-stackoverflow:hover {
-  background:-webkit-gradient(linear, left top, right top, from(#ff6),
-    to(#f6f)); /* Webkit */
-  background:-moz-linear-gradient(left , #ff6, #f6f); /* FF */
-  background:-o-linear-gradient(left, #ff6, #f6f); /* Opera */
-  background:-ms-linear-gradient(left, #ff6, #f6f); /* IE10 */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff66',
-    endColorstr='#ff66ff', GradientType=1); /* IE6-9 */
-}
-
-#link-source {
-  bottom:0px;
   color:#fafafa;
-  left:0px;
-  position:absolute;
-  text-decoration:none;
+  height:88px;
+  padding-bottom:10px;
+}
+#intro-container h1 {
+  font-size:48px;
+  float:left;
+  padding:20px 0;
+  width:500px;
+}
+#intro-container h2 {
+  font-size:24px;
+}
+#intro-container h3 {
+  font-size:20px;
+  float:left;
+  padding:10px 0;
+}
+#intro-container ul {
+  font-size:16px;
+  padding:14px 0;
+}
+#intro-container ul li {
+  font-size:16px;
+  float:left;
+  padding:1px 8px;
+}
+#intro-container ul li a {
+  font-size:16px;
+  color:#fafafa;
 }
 
 #skills-container {
+  clear:both;
 }
 
 div.skill-canvas-container {
@@ -157,5 +132,13 @@ span.skill-icon {
 }
 
 canvas.skill-canvas {
+}
+
+#link-source {
+  bottom:0px;
+  color:#fafafa;
+  left:0px;
+  position:absolute;
+  text-decoration:none;
 }
 /* end regular */
