@@ -103,7 +103,7 @@ body {
 #intro-container ul li {
   font-size:16px;
   float:left;
-  padding:1px 8px;
+  padding:0 8px;
 }
 #intro-container ul li a {
   font-size:16px;
