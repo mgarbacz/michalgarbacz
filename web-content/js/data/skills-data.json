@@ -1,0 +1,12 @@
+[
+  {
+    "div-id": "skill-python",
+    "icon-class": "icon-prog-python",
+    "skill-level": "50"
+  },
+  {
+    "div-id": "skill-ruby",
+    "icon-class": "icon-prog-ruby",
+    "skill-level": "70"
+  }
+]
