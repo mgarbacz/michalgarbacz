@@ -51,67 +51,54 @@ html, body {
 
 body {
   background:#555;
+  background:#333;
   font-family:"Helvetica Nue", Helvetica, Arial, sans-serif;
 }
 
-#div-background {
-  position:absolute;
-  z-index:0;
-}
-
 #div-foreground {
-  width:940px;
+  max-width:944px;
   margin:0 auto;
   height:100%;
-  position:relative;
-  z-index:1;
-}
-
-/* Hacky method to vertically center link-block-container - this div is empty */
-/* We have it float to the left, set the height to take up half the page, and */
-/* bump the div below it upward by half of that div's size so that it centers */
-#hacky-floating {
-  float:left;
-  height:50%;
-  margin-bottom:-160px; /* total height is 320px, so this is half */
 }
 
 #intro-container {
-  clear:both; /* Part of hacky method with floater */
   color:#fafafa;
-  height:88px;
-  padding-bottom:10px;
+  padding:30px 20px;
+}
+#intro-container .intro {
+  padding:20px;
+}
+#intro-container .float {
+  float:left;
 }
 #intro-container h1 {
   font-size:48px;
-  float:left;
-  padding:20px 0;
-  width:500px;
 }
 #intro-container h2 {
   font-size:24px;
 }
 #intro-container h3 {
   font-size:20px;
-  float:left;
-  padding:10px 0;
 }
 #intro-container ul {
-  font-size:16px;
-  padding:14px 0;
+  padding:10px 20px 10px 0;
 }
-#intro-container ul li {
-  font-size:16px;
+#intro-container li {
+  font-size:20px;
   float:left;
-  padding:0 8px;
+  padding:10px;
 }
-#intro-container ul li a {
-  font-size:16px;
-  color:#fafafa;
+#intro-container a {
+  font-size:20px;
+  color:#f6f;
+  text-decoration:none;
 }
 
 #skills-container {
-  clear:both;
+  width:936px;
+  height:208px;
+  padding-bottom:63px; /* to make up for #link-source on short screens */
+  margin:0 auto;
 }
 
 div.skill-canvas-container {
@@ -135,10 +122,60 @@ canvas.skill-canvas {
 }
 
 #link-source {
-  bottom:0px;
+  background:#555;
+  border-top:1px solid #fafafa;
+  width:100%;
   color:#fafafa;
-  left:0px;
-  position:absolute;
+  font-size:12px;
   text-decoration:none;
+  position:fixed;
+  padding:2px 0 2px 10px;
+  left:0px;
+  bottom:0px;
+}
+
+@media all and (max-width:768px) {
+  #intro-container .intro {
+    padding:10px;
+  }
+  #intro-container .float {
+    float:none;
+  }
+  #intro-container h3 {
+    clear:left; /* Else h3 float with the li's */
+  }
+  #intro-container ul {
+    padding:0;
+  }
+}
+@media all and (min-width:685px) and (max-width:768px) {
+  #skills-container {
+    width:624px;
+    height:312px;
+  }
+}
+@media all and (min-width:568px) and (max-width:684px) {
+  #skills-container {
+    width:520px;
+    height:416px;
+  }
+}
+@media all and (min-width:480px) and (max-width:567px) {
+  #skills-container {
+    width:416px;
+    height:520px;
+  }
+}
+@media all and (max-width:479px) {
+  #skills-container {
+    width:312px;
+    height:624px;
+  }
+}
+@media all and (max-width:319px) {
+  #skills-container {
+    width:208px;
+    height:936px;
+  }
 }
 /* end regular */
