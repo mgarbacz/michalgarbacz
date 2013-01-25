@@ -134,7 +134,8 @@ canvas.skill-canvas {
   bottom:0px;
 }
 
-@media all and (max-width:768px) {
+/* At this point, the whole floating thing begins to collapse, so we stop it */
+@media all and (max-width:832px) {
   #intro-container .intro {
     padding:10px;
   }
@@ -148,7 +149,8 @@ canvas.skill-canvas {
     padding:0;
   }
 }
-@media all and (min-width:685px) and (max-width:768px) {
+/* As long as we have our max-width of 944, we rocking. This is when we don't */
+@media all and (min-width:685px) and (max-width:944px) {
   #skills-container {
     width:624px;
     height:312px;
