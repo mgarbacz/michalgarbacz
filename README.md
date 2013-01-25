@@ -9,16 +9,13 @@ Domain Registry and DNS provided by [Nearly Free Speech] (http://www.nearlyfrees
 todos
 =====
 long-term
-* Phase away from paperjs (so many lines of code!) for star field bg
-* Improve performance for mobile devices on star field fps
-* Enable mouse-down for touch screens to move star field
 * Infographic style for intro page
 * Project demos/descriptions
 * Blog? of sorts
-* Add flock of starships to star background (bird style AI)
+* Add flock of starships to background (bird style AI)
 
 short-term
+* Clarify skill canvas (what is this iconage!?)
 * Have python builder script adapt to new files (currently crashes)
 * Have python builder script build javascript and stylesheets
 * Refactor the skill canvas drawing for more automation - backbonejs?
-* Get rid of the gh/so
