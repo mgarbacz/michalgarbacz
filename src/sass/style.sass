@@ -1,0 +1,104 @@
+$background-color: #333
+$text-color: #fafafa
+$base-color-1: #6ff
+$base-color-2: adjust-hue($base-color-1, 120deg)
+$base-color-3: adjust-hue($base-color-1, 240deg)
+
+html, body
+  height: 100%
+
+body
+  background: $background-color
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+
+#div-foreground
+  max-width: 944px
+  margin: 0 auto
+  height: 100%
+
+#intro-container
+  color: $text-color
+  padding: 30px 20px
+
+  .intro
+    padding: 20px
+  .float
+    float: left
+  h1
+    font-size: 48px
+  h2
+    font-size: 24px
+  h3
+    font-size: 20px
+  ul
+    padding: 10px 20px 10px 0
+  li
+    font-size: 20px
+    float: left
+    padding: 10px
+  a
+    font-size: 20px
+    color: $base-color-2
+    text-decoration: none
+  @media all and (max-width : 832px)
+    .intro
+      padding: 10px
+    .float
+      float: none
+    h3
+      clear: left
+    ul
+      padding: 0
+
+
+$skill-canvas-size: 104px
+$skill-canvas-margin: 4px
+
+#skills-container
+  width: $skill-canvas-size * 9
+  height: $skill-canvas-size * 2
+  padding-bottom: 63px
+  margin: 0 auto
+
+  @media all and (min-width : 685px) and (max-width : 944px)
+    width: $skill-canvas-size * 6
+    height: $skill-canvas-size * 3
+  @media all and (min-width : 568px) and (max-width: 684px)
+    width: $skill-canvas-size * 5
+    height: $skill-canvas-size * 4
+  @media all and (min-width : 480px) and (max-width : 567px)
+    width: $skill-canvas-size * 4
+    height: $skill-canvas-size * 5
+  @media all and (min-width : 320px) and (max-width : 479px)
+    width: $skill-canvas-size * 3
+    height: $skill-canvas-size * 6
+  @media all and (max-width : 319px)
+    width: $skill-canvas-size * 2
+    height: $skill-canvas-size * 9
+
+div.skill-canvas-container
+  width: $skill-canvas-size - ($skill-canvas-margin * 2)
+  height: $skill-canvas-size - ($skill-canvas-margin * 2)
+  margin: $skill-canvas-margin
+  float: left
+  position: relative
+
+span.skill-icon
+  color: $base-color-3
+  font-size: 32px
+  padding: 4px
+  position: absolute
+  top: 28px
+  left: 28px
+
+#link-source
+  background: lighten($background-color, 20%)
+  border-top: 1px solid $text-color
+  width: 100%
+  color: $text-color
+  font-size: 12px
+  text-decoration: none
+  position: fixed
+  padding: 2px 0 2px 10px
+  left: 0px
+  bottom: 0px
