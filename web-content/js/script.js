@@ -19,12 +19,14 @@
     context = skillCanvas[0].getContext('2d');
     context.fillStyle = 'rgba(0, 0, 0, 0.0)';
     context.drawImage(skillBack, 0, 0);
+    context.save();
     context.beginPath();
     context.arc(skillBack.width / 2, skillBack.height / 2, skillBack.height / 2, 0 - Math.PI / 2, arcLength - Math.PI / 2, true);
     context.lineTo(skillBack.width / 2, skillBack.height / 2);
     context.closePath();
     context.clip();
     context.drawImage(skillFill, 0, 0);
+    context.restore();
     return skillCanvas;
   };
 
