@@ -1,4 +1,6 @@
-# Ignoring Webstorm files
+# Webstorm files
 .idea
-# Ignoring generated Python files
+# Generated Python files
 *.pyc
+# Sass cache
+.sass-cache
