@@ -3,7 +3,17 @@ html, body {
 
 body {
   background: #333333;
+  color: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 24px; }
+
+h3 {
+  font-size: 20px; }
 
 #div-foreground {
   max-width: 944px;
@@ -11,18 +21,11 @@ body {
   height: 100%; }
 
 #intro-container {
-  color: #fafafa;
   padding: 30px 20px; }
   #intro-container .intro {
     padding: 20px; }
   #intro-container .float {
     float: left; }
-  #intro-container h1 {
-    font-size: 48px; }
-  #intro-container h2 {
-    font-size: 24px; }
-  #intro-container h3 {
-    font-size: 20px; }
   #intro-container ul {
     padding: 10px 20px 10px 0; }
   #intro-container li {
@@ -76,11 +79,11 @@ div.skill-canvas-container {
   float: left;
   position: relative; }
 
-span.skill-icon {
+span.skill-icon, span.skill-name {
   color: #ffff66;
+  position: absolute;
   font-size: 32px;
   padding: 4px;
-  position: absolute;
   top: 28px;
   left: 28px; }
 

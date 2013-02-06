@@ -37,8 +37,20 @@ drawSkillCanvas = (skillLevel) ->
   # Returning the canvas object
   skillCanvas
 
+toggleSkillsOnMouseEnter = (target, icon, name) ->
+  $(target).css 'color', '#6ff'
+  $(icon).hide()
+  $(name).show()
+
+toggleSkillsOnMouseLeave = (target, icon, name) ->
+  $(target).css 'color', '#ff6'
+  $(name).hide()
+  $(icon).show()
+
 # Once the window is done loading, prepend all listed skill canvases
 window.onload = ->
+  $('.skill-name').hide()
+
   $('#skill-python').prepend        drawSkillCanvas 50
   $('#skill-ruby').prepend          drawSkillCanvas 70
   $('#skill-rails').prepend         drawSkillCanvas 70
@@ -57,3 +69,53 @@ window.onload = ->
   $('#skill-postgresql').prepend    drawSkillCanvas 40
   $('#skill-sqlite').prepend        drawSkillCanvas 70
   $('#skill-mongodb').prepend       drawSkillCanvas 70
+
+  $('.skill-canvas-container').hover(
+    -> toggleSkillsOnMouseEnter(
+      $(this).children 'span'
+      $(this).children '.skill-icon'
+      $(this).children '.skill-name'
+    )
+    -> toggleSkillsOnMouseLeave(
+      $(this).children 'span'
+      $(this).children '.skill-icon'
+      $(this).children '.skill-name'
+    )
+  )
+
+  $('#skills-languages').hover(
+    -> toggleSkillsOnMouseEnter(
+      '.skill-language'
+      '.skill-language.skill-icon'
+      '.skill-language.skill-name'
+    )
+    -> toggleSkillsOnMouseLeave(
+      '.skill-language'
+      '.skill-language.skill-icon'
+      '.skill-language.skill-name'
+    )
+  )
+  $('#skills-frameworks').hover(
+    -> toggleSkillsOnMouseEnter(
+      '.skill-framework'
+      '.skill-framework.skill-icon'
+      '.skill-framework.skill-name'
+    )
+    -> toggleSkillsOnMouseLeave(
+      '.skill-framework'
+      '.skill-framework.skill-icon'
+      '.skill-framework.skill-name'
+    )
+  )
+  $('#skills-databases').hover(
+    -> toggleSkillsOnMouseEnter(
+      '.skill-database'
+      '.skill-database.skill-icon'
+      '.skill-database.skill-name'
+    )
+    -> toggleSkillsOnMouseLeave(
+      '.skill-database'
+      '.skill-database.skill-icon'
+      '.skill-database.skill-name'
+    )
+  )

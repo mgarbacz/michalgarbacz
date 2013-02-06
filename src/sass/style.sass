@@ -1,15 +1,23 @@
 $background-color: #333
 $text-color: #fafafa
-$base-color-1: #6ff
-$base-color-2: adjust-hue($base-color-1, 120deg)
-$base-color-3: adjust-hue($base-color-1, 240deg)
+$base-color: #6ff
+$triadic-color-1: adjust-hue($base-color, 120deg)
+$triadic-color-2: adjust-hue($base-color, 240deg)
 
 html, body
   height: 100%
 
 body
   background: $background-color
+  color: $text-color
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+
+h1
+  font-size: 48px
+h2
+  font-size: 24px
+h3
+  font-size: 20px
 
 #div-foreground
   max-width: 944px
@@ -17,19 +25,12 @@ body
   height: 100%
 
 #intro-container
-  color: $text-color
   padding: 30px 20px
 
   .intro
     padding: 20px
   .float
     float: left
-  h1
-    font-size: 48px
-  h2
-    font-size: 24px
-  h3
-    font-size: 20px
   ul
     padding: 10px 20px 10px 0
   li
@@ -38,7 +39,7 @@ body
     padding: 10px
   a
     font-size: 20px
-    color: $base-color-2
+    color: $triadic-color-1
     text-decoration: none
   @media all and (max-width : 832px)
     .intro
@@ -49,7 +50,6 @@ body
       clear: left
     ul
       padding: 0
-
 
 $skill-canvas-size: 104px
 $skill-canvas-margin: 4px
@@ -63,7 +63,7 @@ $skill-canvas-margin: 4px
   @media all and (min-width : 685px) and (max-width : 944px)
     width: $skill-canvas-size * 6
     height: $skill-canvas-size * 3
-  @media all and (min-width : 568px) and (max-width: 684px)
+  @media all and (min-width : 568px) and (max-width : 684px)
     width: $skill-canvas-size * 5
     height: $skill-canvas-size * 4
   @media all and (min-width : 480px) and (max-width : 567px)
@@ -83,11 +83,11 @@ div.skill-canvas-container
   float: left
   position: relative
 
-span.skill-icon
-  color: $base-color-3
+span.skill-icon, span.skill-name
+  color: $triadic-color-2
+  position: absolute
   font-size: 32px
   padding: 4px
-  position: absolute
   top: 28px
   left: 28px
 
