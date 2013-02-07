@@ -1,19 +1,14 @@
 @charset "UTF-8";
 @font-face
 { 
-	font-family: "pictonic";
-	src: url("../font/pictonic.eot");
-	src: url("../font/pictonic.eot?#iefix") format("eot");
-}
- 
-@font-face
-{ 
-	font-family: "pictonic";
-	src:url(https://:/) format("No-IE-404"),
-	url("../font/pictonic.woff") format("woff"),
-	url("../font/pictonic.ttf") format("truetype"),
-	url("../font/pictonic.svg") format("svg");
-	font-weight: normal; font-style: normal;
+    font-family: pictonic;
+    src: url('../font/pictonic.eot');
+    src: url('../font/pictonic.eot?#iefix') format('embedded-opentype'),
+        url('../font/pictonic.ttf') format('truetype'),
+        url('../font/pictonic.woff') format('woff'),
+        url('../font/pictonic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
  
 .pictonic
@@ -50,29 +45,27 @@ a[class^="icon-"], a[class*=" icon-"], span[class^="icon-"], span[class*=" icon-
 	*display: inline;
 }
   
-.icon-os-osx_1_:before { content:""; } 
-.icon-os-linux_1_:before { content:""; } 
-.icon-os-osx-dark:before { content:""; } 
-.icon-os-linux:before { content:""; } 
-.icon-dbs-mysql:before { content:""; } 
-.icon-dbs-postgresql:before { content:""; } 
-.icon-dbs-sqlite:before { content:""; } 
-.icon-dbs-mongodb:before { content:""; } 
-.icon-github-01:before { content:""; } 
-.icon-prog-ruby:before { content:""; } 
-.icon-prog-csharp:before { content:""; } 
-.icon-prog-cplusplus:before { content:""; } 
-.icon-prog-js02:before { content:""; } 
-.icon-prog-java:before { content:""; } 
-.icon-prog-visualstudio:before { content:""; } 
-.icon-prog-python:before { content:""; } 
-.icon-prog-jquery:before { content:""; } 
-.icon-prog-nodejs01:before { content:""; } 
-.icon-prog-rails:before { content:""; } 
-.icon-prog-erlang:before { content:""; } 
-.icon-prog-coffeescr:before { content:""; } 
-.icon-prog-scala:before { content:""; } 
-.icon-mail:before { content:""; } 
-.icon-linkedin:before { content:""; } 
-.icon-android:before { content:""; } 
-.icon-prog-backbonejs:before { content:""; }
+.icon-dbs-mysql:before { content:""; } 
+.icon-dbs-postgresql:before { content:""; } 
+.icon-dbs-sqlite:before { content:""; } 
+.icon-dbs-mongodb:before { content:""; } 
+.icon-github-01:before { content:""; } 
+.icon-prog-ruby:before { content:""; } 
+.icon-prog-csharp:before { content:""; } 
+.icon-prog-cplusplus:before { content:""; } 
+.icon-prog-js02:before { content:""; } 
+.icon-prog-java:before { content:""; } 
+.icon-prog-python:before { content:""; } 
+.icon-prog-jquery:before { content:""; } 
+.icon-prog-nodejs01:before { content:""; } 
+.icon-prog-rails:before { content:""; } 
+.icon-prog-erlang:before { content:""; } 
+.icon-prog-coffeescr:before { content:""; } 
+.icon-prog-scala:before { content:""; } 
+.icon-mail:before { content:""; } 
+.icon-android:before { content:""; } 
+.icon-prog-backbonejs:before { content:""; } 
+.icon-html5-01:before { content:""; } 
+.icon-css3-01:before { content:""; } 
+.icon-prog-php01:before { content:""; } 
+.icon-prog-codeign:before { content:""; }
