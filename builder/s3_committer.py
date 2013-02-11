@@ -23,8 +23,8 @@ def commit_to_s3():
       for filename in files:
         # We want the path to get each file
         local_file_path = os.path.join(directory, filename)
-        # For s3, we don't want the 'web-content' part of file path
-        s3_file_path = local_file_path[12:]
+        # For s3, we don't want the 'public' part of file path
+        s3_file_path = local_file_path[7:]
 
         # We need the times for local and s3 last modified
         local_last_modified = os.path.getmtime(local_file_path)
