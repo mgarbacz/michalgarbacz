@@ -19,7 +19,7 @@ def commit_to_s3():
     bucket = connection.lookup('www.michgarbacz.com')
 
     # Iterating over all files in the web-content folder
-    for directory, subdirectories, files in os.walk('web-content'):
+    for directory, subdirectories, files in os.walk('public'):
       for filename in files:
         # We want the path to get each file
         local_file_path = os.path.join(directory, filename)
