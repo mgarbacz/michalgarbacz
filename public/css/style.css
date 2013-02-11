@@ -24,8 +24,11 @@ h3 {
 #div-foreground {
   max-width: 944px;
   margin: 0 auto;
-  height: 100%;
   padding: 30px 20px; }
+
+.container {
+  border: 1px solid #66ffff;
+  border-radius: 10px; }
 
 #intro-container ul {
   padding: 10px 20px 10px 0; }
@@ -39,7 +42,8 @@ h3 {
   text-decoration: none; }
 
 #enjoy-container, #exp-container {
-  width: 472px;
+  width: 470px;
+  height: 370px;
   position: relative;
   display: inline-block; }
   #enjoy-container ul, #exp-container ul {
@@ -55,9 +59,6 @@ h3 {
     font-size: 16px;
     font-style: italic;
     padding-left: 48px; }
-
-#exp-container {
-  margin-bottom: 63px; }
 
 #link-source {
   background: #666666;
@@ -78,36 +79,18 @@ h3 {
   .float {
     float: none; }
 
+  .container {
+    border: none; }
+
   #intro-container h3 {
     clear: left; }
   #intro-container ul {
     padding: 0; }
 
   #enjoy-container, #exp-container {
-    max-width: 396px; }
+    height: auto; }
     #enjoy-container ul, #exp-container ul {
-      padding: 0 20px; } }
+      padding: 0 15px; } }
 @media all and (min-width: 480px) and (max-width: 832px) {
   #enjoy-container {
     float: left; } }
-@media all and (min-width: 768px) and (max-width: 831px) {
-  #enjoy-container, #exp-container {
-    width: 364px; } }
-@media all and (min-width: 685px) and (max-width: 767px) {
-  #enjoy-container, #exp-container {
-    width: 322px; } }
-@media all and (min-width: 568px) and (max-width: 684px) {
-  #enjoy-container, #exp-container {
-    width: 264px; } }
-@media all and (min-width: 480px) and (max-width: 567px) {
-  #enjoy-container, #exp-container {
-    width: 220px; } }
-@media all and (min-width: 380px) and (max-width: 479px) {
-  #enjoy-container, #exp-container {
-    width: 360px; } }
-@media all and (min-width: 320px) and (max-width: 379px) {
-  #enjoy-container, #exp-container {
-    width: 300px; } }
-@media all and (max-width: 319px) {
-  #enjoy-container, #exp-container {
-    width: 220px; } }
