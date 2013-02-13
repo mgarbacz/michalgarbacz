@@ -28,12 +28,16 @@ def commit_to_s3():
 
         # We need the times for local and s3 last modified
         local_last_modified = os.path.getmtime(local_file_path)
-        s3_last_modified = format_s3_date(bucket
-          .get_key(s3_file_path).last_modified)
+        remote_file = bucket.get_key(s3_file_path)
+        # If the file is new, it won't exist in bucket so we want to add it
+        if remote_file is None:
+          s3_last_modified = 0
+        else:
+          s3_last_modified = format_s3_date(remote_file.last_modified)
 
-        # Is the local modified date newer than s3 modified date?
+        # Has the file been modified since it was uploaded?
         if (local_last_modified > s3_last_modified):
-          print filename + ' is updating...'
+          print filename + ' is uploading...'
           key_file = boto.s3.key.Key(bucket)
           key_file.key = s3_file_path
           key_file.set_contents_from_filename(local_file_path)
