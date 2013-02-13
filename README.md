@@ -15,7 +15,4 @@ long-term
 * Add flock of starships to background (bird style AI)
 
 short-term
-* Clarify skill canvas (what is this iconage!?)
-* Have python builder script adapt to new files (currently crashes)
-* Have python builder script build javascript and stylesheets
-* Refactor the skill canvas drawing for more automation - backbonejs?
+* Clean up builder code - no longer need it to compile js/css
