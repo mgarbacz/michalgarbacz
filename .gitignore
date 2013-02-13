@@ -2,5 +2,7 @@
 .idea
 # Generated Python files
 *.pyc
+# Vim swap files
+*.swp
 # Sass cache
 .sass-cache
