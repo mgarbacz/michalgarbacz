@@ -3,7 +3,7 @@ html, body {
 
 body {
   background: #333333;
-  color: #fafafa;
+  color: #333333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h1 {
@@ -27,8 +27,8 @@ h3 {
   padding: 30px 20px; }
 
 .container {
-  border: 1px solid #66ffff;
-  border-radius: 10px; }
+  background-color: #fafafa;
+  border: 1px solid #333333; }
 
 #intro-container ul {
   padding: 10px 20px 10px 0; }
@@ -38,7 +38,7 @@ h3 {
   padding: 10px; }
 #intro-container a {
   font-size: 20px;
-  color: #ff66ff;
+  color: #888844;
   text-decoration: none; }
 
 #enjoy-container, #exp-container {
@@ -51,7 +51,7 @@ h3 {
   #enjoy-container span, #enjoy-container p, #exp-container span, #exp-container p {
     padding: 4px; }
   #enjoy-container span.skill-icon, #exp-container span.skill-icon {
-    color: #ffff66;
+    color: #448888;
     font-size: 24px; }
   #enjoy-container span.skill-name, #exp-container span.skill-name {
     font-size: 20px; }
@@ -73,24 +73,24 @@ h3 {
   bottom: 0px; }
 
 @media all and (max-width: 832px) {
-  .text-padding {
-    padding: 10px; }
+  #div-foreground {
+    padding: 20px 10px; }
 
   .float {
     float: none; }
 
-  .container {
-    border: none; }
-
   #intro-container h3 {
     clear: left; }
   #intro-container ul {
-    padding: 0; }
+    padding: 0 0 0 20px; }
 
   #enjoy-container, #exp-container {
     height: auto; }
     #enjoy-container ul, #exp-container ul {
-      padding: 0 15px; } }
+      padding: 0 15px 15px 15px; } }
 @media all and (min-width: 480px) and (max-width: 832px) {
+  #enjoy-container, #exp-container {
+    height: 370px; }
+
   #enjoy-container {
     float: left; } }
