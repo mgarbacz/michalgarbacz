@@ -15,4 +15,3 @@ long-term
 * Add flock of starships to background (bird style AI)
 
 short-term
-* Clean up builder code - no longer need it to compile js/css
