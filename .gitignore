@@ -6,3 +6,5 @@
 *.swp
 # Sass cache
 .sass-cache
+# Ignoring NPM packages
+node_modules
