@@ -5,6 +5,3 @@ resizeContainers = () ->
 
 $(window).resize ->
   resizeContainers()
-
-$ ->
-  resizeContainers()
