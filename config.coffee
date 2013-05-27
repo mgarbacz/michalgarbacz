@@ -6,10 +6,12 @@ exports.config =
     javascripts:
       joinTo:
         'js/app.js': /^app/
+        'js/vendor.js': /^vendor/
 
     stylesheets:
       joinTo:
         'ss/app.css': /^app/
+        'ss/vendor.css': /^vendor/
 
   plugins:
     sass:
