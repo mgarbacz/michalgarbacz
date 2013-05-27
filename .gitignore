@@ -6,5 +6,7 @@
 *.swp
 # Sass cache
 .sass-cache
-# Ignoring NPM packages
+# NPM packages
 node_modules
+# Generated public folder
+public
