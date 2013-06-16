@@ -11,7 +11,7 @@ todos
 long-term
 * Infographic style for intro page
 * Project demos/descriptions
-* Blog? of sorts
 * Add flock of starships to background (bird style AI)
 
 short-term
+* Blog? of sorts
