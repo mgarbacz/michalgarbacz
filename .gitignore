@@ -10,3 +10,5 @@
 node_modules
 # Generated public folder
 public
+# Mac file
+.DS_STORE
