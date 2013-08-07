@@ -47,6 +47,19 @@ h3
     color: $triadic-color-1
     text-decoration: none
 
+#projects-container
+  .project
+    height: 200px
+    .project-info
+      width: 50%
+      height: 100% 
+    .project-img
+      width: 50% 
+      height: 100%
+      img
+        max-width: 100%
+        max-height: 100%
+
 #link-source
   background: lighten($background-color, 20%)
   border-top: 1px solid $foreground-color
@@ -69,3 +82,9 @@ h3
       clear: left
     ul
       padding: 0 0 0 20px
+  #projects-container
+    .project
+      height: 400px
+      .project-info, .project-img
+        width: 100%
+        height: 50%
