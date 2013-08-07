@@ -1,4 +1,0 @@
-ResizeContainers = require 'resize'
-
-$ ->
-  ResizeContainers()
