@@ -16,3 +16,5 @@ exports.config =
   plugins:
     sass:
       debug: 'comments'
+
+  sourceMaps: false
