@@ -10,8 +10,8 @@ todos
 =====
 long-term
 * Infographic style for intro page
-* Project demos/descriptions
 * Add flock of starships to background (bird style AI)
 
 short-term
-* Blog? of sorts
+* Blog of sorts
+* Revise project demos/descriptions
