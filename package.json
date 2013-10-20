@@ -3,10 +3,6 @@
     "type": "git",
     "url": "git@github.com:mgarbacz/michgarbacz.git"
   },
-  "scripts": {
-    "start": "brunch watch --server",
-    "test": ""
-  },
   "dependencies": {
     "javascript-brunch": ">= 1.0 < 1.8",
     "coffee-script-brunch": ">= 1.0 < 1.8",
@@ -20,7 +16,5 @@
     "coffeelint-brunch": ">= 1.0 < 1.8",
 
     "auto-reload-brunch": ">= 1.0 < 1.8"
-  },
-  "devDependencies": {
   }
 }
