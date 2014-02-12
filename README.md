@@ -1,4 +1,4 @@
-michgarbacz
+michalgarbacz
 ===========
 
 Hosted from [Amazon S3] (http://aws.amazon.com/s3).
