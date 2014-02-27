@@ -1,7 +1,7 @@
 {
   "repository": {
     "type": "git",
-    "url": "git@github.com:mgarbacz/michgarbacz.git"
+    "url": "git@github.com:mgarbacz/michalgarbacz.git"
   },
   "dependencies": {
     "javascript-brunch": ">= 1.0 < 1.8",
