@@ -12,6 +12,7 @@
 <body>
   <div id="div-foreground">
     <div id="hex-container">
+      <div class="hex hex-offset"></div>
       <div class="hex"></div>
       <div class="hex"></div>
       <div class="hex"></div>
@@ -19,30 +20,29 @@
       <div class="hex"></div>
       <div class="hex"></div>
       <div class="hex"></div>
-      <div class="hex"></div>
-      <div class="hex hex-even"></div>
       <div class="hex hex-image">
-        <img src="http://www.gravatar.com/avatar/c1a1cb91d6709234ff0fed46b166e446.png">
+        <a href="/">
+          <img src="//gravatar.com/avatar/c1a1cb91d6709234ff0fed46b166e446.png">
+        </a>
       </div>
       <div class="hex"></div>
       <div class="hex hex-text">
-        <h2>Projects</h2>
+        <h2><a href="/projects">Projects</a></h2>
       </div>
       <div class="hex hex-text">
-        <h2>Blog</h2>
+        <h2><a href="/blog">Blog</a></h2>
       </div>
       <div class="hex hex-text">
-        <h2>About</h2>
+        <h2><a href="/about">About</a></h2>
       </div>
       <div class="hex"></div>
+      <div class="hex hex-offset"></div>
       <div class="hex"></div>
       <div class="hex"></div>
       <div class="hex"></div>
       <div class="hex"></div>
       <div class="hex"></div>
-      <div class="hex"></div>
-      <div class="hex"></div>
-      <div class="hex"></div>
+      <div class="hex hex-egg"></div>
     </div>
     <div id="intro-container" class="container">
       <h1 class="text-padding float">I am Michal Garbacz</h1>
@@ -226,6 +226,7 @@
   </div>
 </body>
 <script src="js/app.js"></script>
+<script>require('init');</script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36020662-1']);

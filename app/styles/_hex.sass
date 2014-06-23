@@ -35,6 +35,7 @@
     z-index: 10
 
 .hex-image
+  background-color: $background-color
   &:before
     border-bottom-color: transparent
     border-left: 52px solid $background-color
@@ -62,8 +63,26 @@
     line-height: 60px
 
 // offset by size of one + margin-left + half of margin-left
-.hex-even
+.hex-offset
   margin-left: 55px
+
+.hex-egg
+  background-color: $base-color
+  -webkit-transform: rotateY(0deg)
+  -webkit-transition: -webkit-transform 1s, background-color 1s
+  &:before
+    border-bottom-color: $base-color
+    -webkit-transition: border-bottom-color 1s
+  &:after
+    border-top-color: $base-color
+    -webkit-transition: border-top-color 1s
+.hex-egg.on
+  -webkit-transform: rotateY(180deg)
+  background-color: $triadic-color-2
+  &:before
+    border-bottom-color: $triadic-color-2
+  &:after
+    border-top-color: $triadic-color-2
 
 // Adjust width and remainin border by half of margin-left of .hex
 .hex-half
