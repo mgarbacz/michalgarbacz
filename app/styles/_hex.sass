@@ -1,0 +1,82 @@
+#hex-container
+  padding: 20px
+  height: 362px
+
+.hex
+  margin-top: 30px
+  margin-left: 2px
+  margin-bottom: 2px
+  width: 104px
+  height: 60px
+  background-color: $foreground-color
+  position: relative
+  float: left
+
+  &:before
+    content: ""
+    width: 0
+    height: 0
+    border-bottom: 30px solid $foreground-color
+    border-left: 52px solid transparent
+    border-right: 52px solid transparent
+    position: absolute
+    top: -30px
+    z-index: 10
+
+  &:after
+    content: ""
+    width: 0
+    height: 0
+    border-top: 30px solid $foreground-color
+    border-left: 52px solid transparent
+    border-right: 52px solid transparent
+    position: absolute
+    bottom: -30px
+    z-index: 10
+
+.hex-image
+  &:before
+    border-bottom-color: transparent
+    border-left: 52px solid $background-color
+    border-right: 52px solid $background-color
+    z-index: 5
+  &:after
+    border-left: 52px solid $background-color
+    border-right: 52px solid $background-color
+    z-index: 5
+    border-top-color: transparent
+  img
+    position: absolute
+    top: -30px
+    bottom: -30px
+    width: auto
+    height: 120px
+    margin-left: -8px
+    z-index: 1
+    // WHAT THE FUCK IS THIS
+    clip: rect(0, 112px, 104px, 8px)
+
+.hex-text
+  h2
+    text-align: center
+    line-height: 60px
+
+// offset by size of one + margin-left + half of margin-left
+.hex-even
+  margin-left: 55px
+
+// Adjust width and remainin border by half of margin-left of .hex
+.hex-half
+  width: 51px
+
+.hex-right
+  &:before,
+  &:after
+    border-left: none
+    border-right-width: 51px
+
+.hex-left
+  &:before,
+  &:after
+    border-right: none
+    border-left-width: 51px
