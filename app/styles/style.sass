@@ -17,15 +17,22 @@
   left: 0px
   bottom: 0px
 
+.show-small,
+.show-medium
+  display: none
+
+
 @media all and (max-width : 832px)
   .hide-medium
     display: none
+  .show-medium
+    display: initial
+  #hex-container
+    width: 540px
   #div-foreground
     padding: 20px 10px
   .float
     float: none
-  #hex-container
-    width: 324px
   #intro-container
     h3
       clear: left
@@ -42,6 +49,10 @@
 @media all and (max-width : 567px)
   .hide-small
     display: none
+  .show-small
+    display: initial
+  #hex-container
+    width: 324px
   #projects-container
     .project
       height: auto
