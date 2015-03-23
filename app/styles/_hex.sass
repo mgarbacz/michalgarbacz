@@ -12,6 +12,7 @@
   background-color: $foreground-color
   position: relative
   float: left
+  -webkit-transition: -webkit-transform 1s, background-color 1s
 
   &:before
     content: ""
@@ -23,6 +24,7 @@
     position: absolute
     top: -30px
     z-index: 10
+    -webkit-transition: border-bottom-color 1s
 
   &:after
     content: ""
@@ -34,6 +36,7 @@
     position: absolute
     bottom: -30px
     z-index: 10
+    -webkit-transition: border-top-color 1s
 
 .hex-image
   background-color: $background-color
@@ -70,14 +73,11 @@
 .hex-egg
   background-color: $base-color
   -webkit-transform: rotateY(0deg)
-  -webkit-transition: -webkit-transform 1s, background-color 1s
   &:before
     border-bottom-color: $base-color
-    -webkit-transition: border-bottom-color 1s
   &:after
     border-top-color: $base-color
-    -webkit-transition: border-top-color 1s
-.hex-egg.on
+.hex.on
   -webkit-transform: rotateY(180deg)
   background-color: $triadic-color-2
   &:before
