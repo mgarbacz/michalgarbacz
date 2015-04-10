@@ -20,31 +20,31 @@ handleHashChange = (e) ->
 window.addEventListener('hashchange', handleHashChange, false)
 
 
-handlescroll = (e) ->
-  hexes = document.getelementsbyclassname('hex')
-  hexcontainer = document.getelementbyid('hex-container')
+handleScroll = (e) ->
+  hexes = document.getElementsByClassName('hex')
+  hexContainer = document.getElementById('hex-container')
 
-  if window.scrolly < -2
-    hexcontainer.style.width = '797px'
+  if window.scrollY < -2
+    hexContainer.style.width = '797px'
   else
-    hexcontainer.style.width = 811 + (window.scrolly * 7) + 'px'
+    hexContainer.style.width = 811 + (window.scrollY * 7) + 'px'
 
   for hex in hexes
-    if window.scrolly < -2
-      hex.style.margintop = '28px'
-      hex.style.marginbottom = '0px'
-      if hex.classlist.contains('hex-offset')
-        hex.style.marginleft = '53px'
+    if window.scrollY < -2
+      hex.style.marginTop = '28px'
+      hex.style.marginBottom = '0px'
+      if hex.classList.contains('hex-offset')
+        hex.style.marginLeft = '53px'
       else
-        hex.style.marginleft = '0px'
+        hex.style.marginLeft = '0px'
     else
-      hex.style.margintop = 30 + window.scrolly + 'px'
-      hex.style.marginbottom = 2 + window.scrolly + 'px'
-      if hex.classlist.contains('hex-offset')
-        hex.style.marginleft = 55 + window.scrolly + 'px'
+      hex.style.marginTop = 30 + window.scrollY + 'px'
+      hex.style.marginBottom = 2 + window.scrollY + 'px'
+      if hex.classList.contains('hex-offset')
+        hex.style.marginLeft = 55 + window.scrollY + 'px'
       else
-        hex.style.marginleft = 2 + window.scrolly + 'px'
+        hex.style.marginLeft = 2 + window.scrollY + 'px'
 
-  console.log(window.scrolly)
+  console.log(window.scrollY)
 
-window.addeventlistener('scroll', handlescroll, false)
+window.addEventListener('scroll', handleScroll, false)
