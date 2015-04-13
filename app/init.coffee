@@ -19,3 +19,4 @@ handleHashChange = (e) ->
 
 window.addEventListener('hashchange', handleHashChange, false)
 
+handleHashChange({})
