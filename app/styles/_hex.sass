@@ -75,7 +75,6 @@
 .hex-egg
   background-color: $base-color
   -webkit-transform: rotateY(0deg)
-  -webkit-animation: flip-off 1.2s
   &:before
     border-bottom-color: $base-color
   &:after
@@ -102,25 +101,6 @@
   99%
     -webkit-filter: drop-shadow(0px 0px 10px #333)
   100%
-    z-index: 1
-
-@-webkit-keyframes flip-off
-  0%
-    -webkit-transform: rotateY(180deg) scale(1.0)
-    -webkit-filter: drop-shadow(0px 0px 10px #333)
-    z-index: 1000
-  15%
-    -webkit-transform: rotateY(180deg) scale(1.01)
-  40%
-    -webkit-transform: rotateY(180deg) scale(1.01)
-  60%
-    -webkit-transform: rotateY(0deg) scale(1.01)
-  85%
-    -webkit-transform: rotateY(0deg) scale(1.01)
-  99%
-    -webkit-transform: rotateY(0deg) scale(1.0)
-  100%
-    -webkit-filter: drop-shadow(0px 0px 10px #333)
     z-index: 1
 
 // Adjust width and remaining border by half of margin-left of .hex
