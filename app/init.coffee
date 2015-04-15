@@ -12,9 +12,9 @@ handleHashChange = (e) ->
 
   if window.location.hash is '#/projects'
     document.getElementById('hex-projects').classList.toggle('on')
-  if window.location.hash is '#/blog'
+  else if window.location.hash is '#/blog'
     document.getElementById('hex-blog').classList.toggle('on')
-  if window.location.hash is '#/about'
+  else if window.location.hash is '#/about'
     document.getElementById('hex-about').classList.toggle('on')
 
 window.addEventListener('hashchange', handleHashChange, false)
