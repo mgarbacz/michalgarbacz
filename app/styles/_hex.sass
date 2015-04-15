@@ -4,11 +4,11 @@
   margin: 0 auto
 
 .hex
-  margin-top: 30px
+  margin-top: $hex-quad-height
   margin-left: 2px
   margin-bottom: 2px
-  width: 104px
-  height: 60px
+  width: $hex-width
+  height: $hex-mid-height
   background-color: $foreground-color
   position: relative
   float: left
@@ -19,11 +19,11 @@
     content: ""
     width: 0
     height: 0
-    border-bottom: 30px solid $foreground-color
-    border-left: 52px solid transparent
-    border-right: 52px solid transparent
+    border-bottom: $hex-quad-height solid $foreground-color
+    border-left: $hex-half-width solid transparent
+    border-right: $hex-half-width solid transparent
     position: absolute
-    top: -30px
+    top: -$hex-quad-height
     z-index: 10
     -webkit-transition: border-bottom-color 0s 0.5s
 
@@ -31,11 +31,11 @@
     content: ""
     width: 0
     height: 0
-    border-top: 30px solid $foreground-color
-    border-left: 52px solid transparent
-    border-right: 52px solid transparent
+    border-top: $hex-quad-height solid $foreground-color
+    border-left: $hex-half-width solid transparent
+    border-right: $hex-half-width solid transparent
     position: absolute
-    bottom: -30px
+    bottom: -$hex-quad-height
     z-index: 10
     -webkit-transition: border-top-color 0s 0.5s
 
@@ -44,18 +44,18 @@
   z-index: 0
   &:before
     border-bottom-color: transparent
-    border-left: 52px solid $background-color
-    border-right: 52px solid $background-color
+    border-left: $hex-half-width solid $background-color
+    border-right: $hex-half-width solid $background-color
   &:after
     border-top-color: transparent
-    border-left: 52px solid $background-color
-    border-right: 52px solid $background-color
+    border-left: $hex-half-width solid $background-color
+    border-right: $hex-half-width solid $background-color
   img
     position: absolute
-    top: -30px
-    bottom: -30px
+    top: -$hex-quad-height
+    bottom: -$hex-quad-height
     width: auto
-    height: 120px
+    height: $hex-height
     margin-left: -8px
     z-index: 1
     clip: rect(0, 112px, 120px, 8px)
@@ -63,7 +63,7 @@
 .hex-text
   h2
     text-align: center
-    line-height: 60px
+    line-height: $hex-mid-height
     -webkit-transition: -webkit-transform 0s 0.5s
     a
       -webkit-transition: color 0s 0.5s
