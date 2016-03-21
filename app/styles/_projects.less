@@ -1,61 +1,73 @@
-#projects-container
-  .project
-    position: relative
-    height: 200px
-    .left
-      position: absolute
-      left: 0
-      border-right: 1px solid $background-color
-    .right
-      position: absolute
-      right: 0
-      border-left: 1px solid $background-color
-    .project-info
-      height: 100%
-      width: 60%
-      text-align: center
-      .project-links
-        width: 220px
-        margin: 0 auto
-      .project-link
-        display: inline-block
-        padding: 8px 12px
-        margin: 5px 20px
-        font-size: 14px
-        font-weight: normal
-        text-align: center
-        white-space: nowrap
-        vertical-align: middle
-        cursor: pointer
-        border: 1px solid transparent
-        -webkit-user-select: none
-        -moz-user-select: none
-        -ms-user-select: none
-        -o-user-select: none
-        user-select: none
-      .disabled
-        opacity: 0.5
-        cursor: default
-      .project-link-demo
-        color: $foreground-color
-        background-color: $triadic-color-2
-        border-color: darken($triadic-color-2, 5%)
-      .project-link-source
-        color: $foreground-color
-        background-color: $base-color
-        border-color: darken($base-color, 5%)
-      .project-technology
-        display: block
-        font-size: 14px
-        padding-top: 10px
-    .project-img
-      height: 100%
-      width: 40%
-      max-width: 100%
-      img
-        width: auto
-        height: 100%
-        max-height: 200px
-        display: block
-        margin: auto
-        padding: 10px /* to make up for border */
+.project {
+  position: relative;
+  height: 200px;
+  .left {
+    position: absolute;
+    left: 0;
+    border-right: 1px solid @background-color;
+  }
+  .right {
+    position: absolute;
+    right: 0;
+    border-left: 1px solid @background-color;
+  }
+}
+.project-info {
+  height: 100%;
+  width: 60%;
+  text-align: center;
+}
+.project-links {
+  width: 220px;
+  margin: 0 auto;
+}
+.project-link {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 5px 20px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  .disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+.project-link-demo {
+  color: @foreground-color;
+  background-color: @triadic-color-2;
+  border-color: darken(@triadic-color-2, 5%);
+}
+.project-link-source {
+  color: @foreground-color;
+  background-color: @base-color;
+  border-color: darken(@base-color, 5%);
+}
+.project-technology {
+  display: block;
+  font-size: 14px;
+  padding-top: 10px;
+}
+.project-img {
+  height: 100%;
+  width: 40%;
+  max-width: 100%;
+  img {
+    width: auto;
+    height: 100%;
+    max-height: 200px;
+    display: block;
+    margin: auto;
+    padding: 10px /* to make up for border */;
+  }
+}

@@ -1,67 +1,19 @@
-@import reset
-@import variables
-@import main
-@import intro
-@import hex
-@import projects
+@import '_reset';
+@import '_variables';
+@import '_main';
+@import '_intro';
+@import '_hex';
+@import '_projects';
 
-#link-source
-  background: lighten($background-color, 20%)
-  border-top: 1px solid $foreground-color
-  width: 100%
-  color: $foreground-color
-  font-size: 12px
-  text-decoration: none
-  position: fixed
-  padding: 2px 0 2px 10px
-  left: 0px
-  bottom: 0px
-
-.show-small,
-.show-medium
-  display: none
-
-
-@media all and (max-width : 832px)
-  .hide-medium
-    display: none
-  .show-medium
-    display: initial
-  #hex-container
-    width: 540px
-  #div-foreground
-    padding: 20px 10px
-  .float
-    float: none
-  #intro-container
-    h3
-      clear: left
-    ul
-      padding: 0 0 0 20px
-
-  #projects-container
-    .project
-      .project-img
-        img
-          max-width: 100%
-          height: auto
-
-@media all and (max-width : 567px)
-  .hide-small
-    display: none
-  .show-small
-    display: initial
-  #hex-container
-    width: 324px
-  #projects-container
-    .project
-      height: auto
-      .left
-        top: 0
-        border-right: none
-      .right
-        bottom: 0
-        border-left: none
-      .project-info, .project-img
-        position: relative
-        width: 100%
+#link-source {
+  background: lighten(@background-color, 20%);
+  border-top: 1px solid @foreground-color;
+  width: 100%;
+  color: @foreground-color;
+  font-size: 12px;
+  text-decoration: none;
+  position: fixed;
+  padding: 2px 0 2px 10px;
+  left: 0px;
+  bottom: 0px;
+}
