@@ -1,4 +1,5 @@
 module.exports = {
+  notifications: false,
   paths: {
     public: 'public'
   },
