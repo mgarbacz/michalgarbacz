@@ -8,6 +8,7 @@
 .sass-cache
 # NPM packages
 node_modules
+package-lock.json
 # Generated public folder
 public
 # Mac file
